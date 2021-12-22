@@ -3,11 +3,13 @@ import java.util.function.IntPredicate;
 public class sortedMerge {
 
     public static void main(String[] args) {
-        int[] arr = {4,5,3,7,4,2,1};
-        int p1 =smallSumProcess(arr,0,arr.length-1);
+        int[] arr = {4,8,1,3,2};
+        //int p1 =smallSumProcess(arr,0,arr.length-1);
+        int p2 = biggerThanTwice(arr);
         //process(arr,0,arr.length-1);
         //print(arr);
-        System.out.println(p1);
+        System.out.println(p2);
+        print(arr);
 
     }
     public static void print(int[] arr){
@@ -111,6 +113,56 @@ public class sortedMerge {
         }
 
         return result;
+    }
+
+    //biggerThanTwice: 右边的数x2小于一个数
+    public static int biggerThanTwice(int[] arr){
+        if(arr == null || arr.length< 2){
+            return 0;
+        }
+        return biggerThanTwiceProcess(arr, 0, arr.length-1);
+    }
+    public static int biggerThanTwiceProcess(int[] arr,int left,int  right){
+        if( left == right){
+            return 0;
+        }
+        int mid = left + ((right - left) >> 1);
+        return biggerThanTwiceProcess(arr, left, mid)+
+                biggerThanTwiceProcess(arr, mid+1, right)+
+                biggerThanTwiceMerge(arr, left,right,mid);
+    }
+    public static int biggerThanTwiceMerge(int[] arr, int left, int right, int mid){
+
+        int result = 0;
+        int fakeRight = mid+1;
+        for( int i = left; i <= mid; i ++){
+            while (fakeRight <=right && arr[i]> (arr[fakeRight]*2)){
+                fakeRight++;
+            }
+            result += fakeRight - mid -1;
+
+        }
+
+        int[] sorted = new int[right-left +1];
+        int p1 = left;
+        int p2 = mid +1;
+        int index = 0;
+        while(p1 <= mid && p2 <= right){
+            sorted[index++] = arr[p1]< arr[p2] ? arr[p1++] : arr[p2++];
+        }
+        while (p1 <= mid) {
+            sorted[index++] = arr[p1++];
+        }
+        while (p2 <= right) {
+            sorted[index++] = arr[p2++];
+        }
+        for(int i = 0; i < sorted.length; i ++){
+            arr[left+i] = sorted[i];
+        }
+        return result;
+
+
+
     }
 
 
