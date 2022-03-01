@@ -1,42 +1,45 @@
 package basicAlgo.ReversePair;
 
 public class ReversePair {
-    public static int reverPairNumber(int[] arr){
-        if( arr == null || arr.length < 2){
+    public static int reverPairNumber(int[] arr) {
+        if (arr == null || arr.length < 2) {
             return 0;
         }
-        return process(arr, 0, arr.length -1 );
+        return process(arr, 0, arr.length - 1);
     }
-    public static int process(int[] arr, int left, int right){
+
+    public static int process(int[] arr, int left, int right) {
         if (left == right) {
             return 0;
         }
-        int mid = left + ((right-right ) >>1);
-        return  process(arr, left, mid) +
-                process(arr,mid+1,right)+
-                merge(arr,left,mid,right);
+        int mid = left + ((right - right) >> 1);
+        return process(arr, left, mid) +
+                process(arr, mid + 1, right) +
+                merge(arr, left, mid, right);
     }
-    public static int merge(int[] arr, int left, int mid , int right){
-        int[] help = new int[right -left +1];
+
+    public static int merge(int[] arr, int left, int mid, int right) {
+        int[] help = new int[right - left + 1];
         int p1 = mid;
         int p2 = right;
-        int i = help.length -1 ;
+        int i = help.length - 1;
         int ans = 0;
-        while( p1 >= left && p2 >= mid + 1){
-            ans += arr[p1] > arr[p2] ? p2 - mid :0 ;
-            help[i--] = arr[p1] > arr[p2] ? arr[p1--] : arr[p2 --];
+        while (p1 >= left && p2 >= mid + 1) {
+            ans += arr[p1] > arr[p2] ? p2 - mid : 0;
+            help[i--] = arr[p1] > arr[p2] ? arr[p1--] : arr[p2--];
         }
         while (p1 >= left) {
-            help[i--] = arr[p1 --];
+            help[i--] = arr[p1--];
         }
-        while (p2 >= mid +1) {
+        while (p2 >= mid + 1) {
             help[i--] = arr[p2--];
         }
-        for(i = 0; i < help.length; i++){
-            arr[i+left]= help[i];
+        for (i = 0; i < help.length; i++) {
+            arr[i + left] = help[i];
         }
         return ans;
     }
+
     // for test
     public static int comparator(int[] arr) {
         int ans = 0;
