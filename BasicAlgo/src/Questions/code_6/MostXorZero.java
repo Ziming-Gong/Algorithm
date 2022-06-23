@@ -65,12 +65,13 @@ public class MostXorZero {
         int[] dp = new int[N];
         HashMap<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
-        int xor = 0;
-        for (int i = 0; i < N; i++) {
+        int xor = arr[0];
+        dp[0] = xor == 0 ? 1 : 0;
+        map.put(xor, 0);
+
+        for (int i = 1; i < N; i++) {
             xor ^= arr[i];
-            if (i > 0) {
-                dp[i] = dp[i - 1];
-            }
+            dp[i] = dp[i - 1];
             if (map.containsKey(xor)) {
                 dp[i] = Math.max(dp[i], map.get(xor) == -1 ? 1 : 1 + dp[map.get(xor)]);
             }
