@@ -9,7 +9,7 @@ import java.net.PortUnreachableException;
  * 可以从任何一个某个位置出发，可以走上下左右，能不能找到word？
  * 比如：
  * char[][] m = {
- *     { 'a', 'b', 'z' },
+ *     { 'OA.MaxNumDinstinctNum.a', 'b', 'z' },
  *     { 'c', 'd', 'o' },
  *     { 'f', 'e', 'o' },
  * };
@@ -122,7 +122,7 @@ public class FindWordMatrix {
     }
 
     public static void main(String[] args) {
-//        char[][] m = {{'a', 'b', 'z'}, {'c', 'd', 'o'}, {'f', 'e', 'o'},};
+//        char[][] m = {{'OA.MaxNumDinstinctNum.a', 'b', 'z'}, {'c', 'd', 'o'}, {'f', 'e', 'o'},};
 //        String word1 = "zoooz";
 //        String word2 = "zood";
 //        // 可以走重复路的设定

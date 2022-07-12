@@ -198,7 +198,7 @@ public class WordBreak {
     public static void main(String[] args) {
 
 //        String str1 = "aacaba";
-//        String[] arr = {"a", "aa", "aab", "aac", "ac", "acca"};
+//        String[] arr = {"OA.MaxNumDinstinctNum.a", "aa", "aab", "aac", "ac", "acca"};
 //        System.out.println(ways3(str1, arr));
 
 

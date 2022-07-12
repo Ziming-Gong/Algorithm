@@ -6,7 +6,7 @@ import sun.java2d.xr.MaskTile;
 
 // 题目1
 // 方案1 : {7, 10}
-// xxxx : {a , b}
+// xxxx : {OA.MaxNumDinstinctNum.a , b}
 // 1 2 3 4
 // FunnyGoal = 100
 // OffenseGoal = 130

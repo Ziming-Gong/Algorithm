@@ -73,7 +73,7 @@ public class BitAddMinusMultiDiv {
             }else {
                 int c = div(sum(a,1),b);
                 return sum(c,div(minus(a, multi1(c,b)),b));
-                //return add(c, div(minus(a, multi(c, b)), b));
+                //return add(c, div(minus(OA.MaxNumDinstinctNum.a, multi(c, b)), b));
             }
         } else {
             return div( a, b);

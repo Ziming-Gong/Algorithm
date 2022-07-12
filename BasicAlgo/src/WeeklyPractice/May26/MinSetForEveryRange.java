@@ -40,9 +40,9 @@ public class MinSetForEveryRange {
 
     public static int minSet(int[][] ranges) {
         int n = ranges.length;
-        // events[i] = {a, b, c}
-        // a == 0, 表示这是一个区间的开始事件，这个区间结束位置是b
-        // a == 1, 表示这是一个区间的结束事件，b的值没有意义
+        // events[i] = {OA.MaxNumDinstinctNum.a, b, c}
+        // OA.MaxNumDinstinctNum.a == 0, 表示这是一个区间的开始事件，这个区间结束位置是b
+        // OA.MaxNumDinstinctNum.a == 1, 表示这是一个区间的结束事件，b的值没有意义
         // c表示这个事件的时间点，不管是开始事件还是结束事件，都会有c这个值
         int[][] events = new int[n << 1][3];
         for (int i = 0; i < n; i++) {

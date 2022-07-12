@@ -324,17 +324,17 @@ public class SizeBalanceTreeCode {
         SizeBalancedTreeMap<String, Integer> sbt = new SizeBalancedTreeMap<String, Integer>();
         sbt.put("d", 4);
         sbt.put("c", 3);
-        sbt.put("a", 1);
+        sbt.put("OA.MaxNumDinstinctNum.a", 1);
         sbt.put("b", 2);
         // sbt.put("e", 5);
         sbt.put("g", 7);
         sbt.put("f", 6);
         sbt.put("h", 8);
         sbt.put("i", 9);
-        sbt.put("a", 111);
-        System.out.println(sbt.get("a"));
-        sbt.put("a", 1);
-        System.out.println(sbt.get("a"));
+        sbt.put("OA.MaxNumDinstinctNum.a", 111);
+        System.out.println(sbt.get("OA.MaxNumDinstinctNum.a"));
+        sbt.put("OA.MaxNumDinstinctNum.a", 1);
+        System.out.println(sbt.get("OA.MaxNumDinstinctNum.a"));
         for (int i = 0; i < sbt.size(); i++) {
             System.out.println(sbt.getIndexKey(i) + " , " + sbt.getIndexValue(i));
         }

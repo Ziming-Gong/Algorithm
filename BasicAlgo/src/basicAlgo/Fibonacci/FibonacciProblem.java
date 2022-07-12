@@ -64,9 +64,9 @@ public class FibonacciProblem {
     }
 
     public static int[][] matrixPower(int[][] a, int[][] b) {
-        int m = a.length; // row of a
+        int m = a.length; // row of OA.MaxNumDinstinctNum.a
         int n = b[0].length; // column of b
-        int k = a[0].length; // column of a and row of b
+        int k = a[0].length; // column of OA.MaxNumDinstinctNum.a and row of b
         int[][] ans = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {

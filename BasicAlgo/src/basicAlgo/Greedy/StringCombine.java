@@ -94,7 +94,7 @@ public class StringCombine {
 
     public static void main(String[] args) {
 
-        String[] strs = {"a","b","c"};
+        String[] strs = {"OA.MaxNumDinstinctNum.a","b","c"};
         lowestString(strs);
 
 

@@ -47,7 +47,7 @@ public class CoffeeMachine {
         if(index == drinks.length){
             return 0;
         }
-        //if choose a
+        //if choose OA.MaxNumDinstinctNum.a
         int timeA = Math.max(free, drinks[index]) + a;
         int restA = process(drinks, index + 1, a, b, timeA);
         int resultA = Math.max(timeA, restA);
@@ -163,7 +163,7 @@ public class CoffeeMachine {
             if (ans1 != ans2 || ans2 != ans3) {
                 printArray(arr);
                 System.out.println("n : " + n);
-                System.out.println("a : " + a);
+                System.out.println("OA.MaxNumDinstinctNum.a : " + a);
                 System.out.println("b : " + b);
                 System.out.println(ans1 + " , " + ans2 + " , " + ans3);
                 System.out.println("===============");

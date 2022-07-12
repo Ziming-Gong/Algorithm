@@ -16,18 +16,18 @@
 //// 快手考试的时候，给定的数据量，全排列的代码也能过的！
 //// 1 <= n <= 1000, 1<= 积分 <= 10000;
 //public class MaxMoneyMostMin {
-//    public static long mostMin1(int a, int b, int[] value, int[] trouble) {
+//    public static long mostMin1(int OA.MaxNumDinstinctNum.a, int b, int[] value, int[] trouble) {
 //
 //
 //    }
 //
 //
-//    public static long mostMin2(int a, int b, int[] value, int[] trouble) {
+//    public static long mostMin2(int OA.MaxNumDinstinctNum.a, int b, int[] value, int[] trouble) {
 //        int n = value.length;
 //        long[][] staff = new long[n][2];
 //        long left = 0;
 //        long right = 0;
-//        long valueAll = a;
+//        long valueAll = OA.MaxNumDinstinctNum.a;
 //        for (int i = 0; i < n; i++) {
 //            right = Math.max(right, valueAll / (trouble[i])); //为什么可以确定 right的位置
 //            staff[i][1] = (long) value[i] * (long) trouble[i];
@@ -77,13 +77,13 @@
 //        int testTime = 5000;
 //        System.out.println("begin");
 //        for (int i = 0; i < testTime; i++) {
-//            int a = (int) (Math.random() * v) + 1;
+//            int OA.MaxNumDinstinctNum.a = (int) (Math.random() * v) + 1;
 //            int b = (int) (Math.random() * v) + 1;
 //            int len = (int) (Math.random() * n);
 //            int[] value = randomArray(len, v);
 //            int[] trouble = randomArray(len, v);
-//            long ans1 = mostMin1(a, b, value, trouble);
-//            long ans2 = mostMin2(a, b, value, trouble);
+//            long ans1 = mostMin1(OA.MaxNumDinstinctNum.a, b, value, trouble);
+//            long ans2 = mostMin2(OA.MaxNumDinstinctNum.a, b, value, trouble);
 //            if (ans1 != ans2) {
 //                System.out.println("fuck！");
 //                break;

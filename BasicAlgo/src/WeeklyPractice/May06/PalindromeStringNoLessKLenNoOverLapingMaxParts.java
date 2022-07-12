@@ -88,12 +88,12 @@ public class PalindromeStringNoLessKLenNoOverLapingMaxParts {
 //        for (int i = 0; i < n; i++) {
 //            if (R < i) {
 //                R = i;
-//                int a = 1;
-//                while (i - a >= 0 && i + a < n && isPalindrome(str, i - a, i + a)) {
+//                int OA.MaxNumDinstinctNum.a = 1;
+//                while (i - OA.MaxNumDinstinctNum.a >= 0 && i + OA.MaxNumDinstinctNum.a < n && isPalindrome(str, i - OA.MaxNumDinstinctNum.a, i + OA.MaxNumDinstinctNum.a)) {
 //                    R++;
-//                    a++;
+//                    OA.MaxNumDinstinctNum.a++;
 //                }
-//                ans[i] = a;
+//                ans[i] = OA.MaxNumDinstinctNum.a;
 //            } else {
 //                int r = ans[2 * C - i];
 //                if (i + r == R) {

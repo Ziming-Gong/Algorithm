@@ -10,7 +10,7 @@ public class MinDistanceFromLeftUpToRightDown {
         int n = matrix.length;
         int m = matrix[0].length;
         boolean[][] TFTable = new boolean[n][m];
-//        int[] {a, b, c} a = cost b = row c = col
+//        int[] {OA.MaxNumDinstinctNum.a, b, c} OA.MaxNumDinstinctNum.a = cost b = row c = col
         heap.add(new int[]{0, 0, 0});
         int ans = 0;
         while (!heap.isEmpty()) {
