@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ComplementaryPair {
+
+
+    //正式方法 ON
     public static long solve(List<String> list) {
         HashMap<Integer, Long> map = new HashMap<>();
         long ans = 0;
@@ -31,6 +34,7 @@ public class ComplementaryPair {
         return ans;
     }
 
+    //对数器 O(N^2)
     public static long right(List<String> list) {
         long ans = 0;
         for (int i = 0; i < list.size(); i++) {
