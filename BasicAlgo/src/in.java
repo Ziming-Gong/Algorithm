@@ -2,15 +2,17 @@ import java.util.Scanner;
 
 public class in {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("total");
-        double g1 = sc.nextDouble();
-        System.out.println("earned");
-        double g2 = sc.nextDouble();
-        System.out.println("percentage");
-        double g3 = sc.nextDouble();
-        Double grade = (g2 / g1) * g3;
-        sc.close();
-        System.out.println(grade);
+        for(int i = 1; i < 10000; i ++){
+            int a = (int) (Math.random() * 10000);
+            int b = (int) (Math.random() * 10000);
+            int c = (a & b) + (a | b);
+            int d = (a ^ b) + (a & b) * 2;
+            if(a + b != c || a + b != d){
+                System.out.println("oops");
+                break;
+            }
+        }
+        System.out.println("test end");
+
     }
 }

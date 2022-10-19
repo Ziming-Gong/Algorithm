@@ -44,7 +44,6 @@ public class KMP {
             }
         }
         return next;
-
     }
 
 
