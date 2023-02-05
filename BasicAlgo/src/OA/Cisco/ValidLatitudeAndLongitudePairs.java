@@ -1,6 +1,7 @@
 package OA.Cisco;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class ValidLatitudeAndLongitudePairs {
 
@@ -32,4 +33,5 @@ public class ValidLatitudeAndLongitudePairs {
         return true;
 
     }
+
 }
