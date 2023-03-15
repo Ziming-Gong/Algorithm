@@ -1,5 +1,4 @@
 package basicAlgo.QuickSort;
-
 public class QuickSort_01 {
     public static void swap(int[] arr, int i, int j){
         int temp = arr[i];
